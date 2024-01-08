@@ -11,7 +11,12 @@ import RxCocoa
 import RxSwift
 import CoreLocation
 
-final class WeatherViewModel {
+protocol IWeatherViewModel {
+	func getWeatherByCity(city: String)
+	func getWeatherByLocation(lat: CLLocationDegrees, lon: CLLocationDegrees)
+}
+
+final class WeatherViewModel: IWeatherViewModel {
 	
 	let weatherData = PublishRelay<WeatherModel>()
 	let weatherService = WeatherNetworkService()

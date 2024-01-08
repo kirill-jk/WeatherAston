@@ -10,7 +10,11 @@ import RxCocoa
 import RxSwift
 import CoreLocation
 
-final class FavoriteCityViewModel {
+protocol IFavoriteCityViewModel {
+	func getWeatherByCity(city: String)
+}
+
+final class FavoriteCityViewModel: IFavoriteCityViewModel {
 	
 	let weatherData = PublishRelay<WeatherModel>()
 	let weatherService = WeatherNetworkService()
