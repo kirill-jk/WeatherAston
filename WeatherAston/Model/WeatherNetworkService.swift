@@ -14,9 +14,9 @@ import RxSwift
 private enum Constants {
 	static let baseURL = "https://api.openweathermap.org/data/2.5/forecast?&appid=d6880538c375d900fdce78998ed676e6&units=metric"
 	static let currentDay = 0
-	static let dayOne = 6
-	static let dayTwo = 12
-	static let dayThree = 18
+	static let dayOne = 7
+	static let dayTwo = 15
+	static let dayThree = 23
 	static let dateFormat = "dd.MM.yyyy"
 }
 
